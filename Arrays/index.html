@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    const shopping = ["bread", "milk", "cheese", "hummus","noodles"];
+    console.log(shopping);
+
+    //Finding the length of an array
+    console.log(shopping.length);
+
+    //Accessing and modifying array items
+    console.log(shopping[0]);
+
+    shopping[0] = "tahini";
+    console.log(shopping);
+
+    const random = ["tree", 795,[0,1,2]];
+    console.log(random[2][2])
+
+
+    //FINDING THE INDEX OF ITEMS IN AN ARRAY
+    let birds = ["Parrot", "Falcon", "Owl"];
+    console.log(birds.indexOf("Owl"));
+    console.log(birds.indexOf("Rabbit"));
+
+    //ADDING ITEMS  
+    let cities  = ["Manchester", "Liverpool"];
+    cities.push("Cardiff");
+    console.log(cities);
+
+    cities.push("Bradford","Brighton");
+    console.log(cities);
+
+    const newLength = cities.push("Bristol");
+    console.log(newLength);
+
+
+    //To add an item to the start of the array, use unshift()
+    cities.unshift("Edinburgh");
+    console.log(cities);
+
+    //REMOVING ITEMS
+    //To remove the last item from the array, use pop()
+    cities = ["Manchester", "Liverpool"];
+    // cities.pop()
+
+    const removedCity = cities.pop();
+    console.log(cities);
+    console.log(removedCity);
+
+    //To remove the first item from an array, use shift()
+    cities = ["Manchester", "Liverpool"];
+    cities.shift();
+    console.log(cities);
+    
+
+    //If you know the index of an item, you can remove it from the array using splice()
+    // first argument - where to start removing items
+    // second argument - how many items ahould be removed
+
+    cities = ["Manchester", "Liverpool","Edinburgh","Carlisle"];
+    let index = cities.indexOf("Liverpool");
+
+    if(index !== -1){
+        cities.splice(index, 1)
+    }
+
+    console.log(cities);
+
+    //Removing more than item
+    cities = ["Manchester", "Liverpool","Edinburgh","Carlisle"];
+    index = cities.indexOf("Liverpool");
+
+    if (index !== -1){
+        cities.splice(index,2);
+    }
+    console.log(cities);
+
+    //ACCESSING EVERY ITEM
+    birds = ["Parrot", "Falcon", "Owl"];
+    for (const bird of birds){
+        console.log(bird);
+    }
+
+    //Do the same thing to each item in an array
+    // map() 
+    function double(number){
+        return number * 2;
+    }
+
+    const numbers = [5,2,7,6];
+    const doubled = numbers.map(double);
+
+    console.log(doubled);
+
+    //Create an array containing only items in the orihinal array that match some test - using filter()
+    function isLong(city){
+        return city.length > 8;
+    }
+
+
+    cities = ["London", "Liverpool", "Totnes", "Edinburgh"];
+    const longer = cities.filter(isLong)
+    console.log(longer);
+
+    //CONVERTING BETWEEN STRINGS AND ARRAYS
+    //split() - takes a single parameter, the character you want separate the string at, and returns the
+    //substrings between the separator as items in an array
+
+    const data = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+
+    //split at each comma
+    cities = data.split(",")
+    console.log(cities);
+
+    //Find the length of the new array, and retrieving some items from it
+    console.log(cities.length);
+
+    console.log(cities[0]);
+    console.log(cities[1]);
+
+    console.log(cities.length - 1);
+
+
+    //Ypu can also go the opposite using the join() method - can use different characters
+    const commaSeparated = cities.join("'");
+    console.log(commaSeparated);
+
+    //toString() - simpler though only uses comma
+
+    const dogNames = ["Rocket", "Flash","Bella", "Slugger"];
+    console.log(dogNames.toString())
+
+
+
+</script>
+</html>

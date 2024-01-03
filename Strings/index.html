@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Head</h1>
+    
+
+    <script>
+
+        const string = "This is my string"
+
+        //Finding the length iof a string
+        const browserType = "mozilla";
+        console.log(browserType.length);
+
+
+        //Retrieving a specific string character
+        console.log(browserType[0])
+
+        console.log(browserType[browserType.length - 1])  //retreive the last character of any string
+
+        //Testing if a string contains a substring
+
+        if (browserType.includes("zilla")){
+            console.log("Found  zilla");
+        }
+        else{
+            console.log("No zilla here");
+        }
+
+
+        //To know if string starts or ends with particular substring
+        // startsWith()
+        //endsWith()
+
+        if (browserType.startsWith("zilla")){
+            console.log("Found zilla at the start");
+        }
+
+        else{
+            console.log("No zilla here");
+        }
+
+        if (browserType.endsWith("zilla")){
+            console.log("Found zilla at the end");
+        }
+
+        else{
+            console.log("No zilla here")
+        }
+
+
+        //Finding the position of a substring in a string using the indexOf() method
+        //Takes 2 parameters -  the substring you wanna search for and 
+        //an optional parameter that specifies the starting point of the search
+        const tagline = "MDN - Resources for developers, by developers";
+        console.log(tagline.indexOf("developers"));
+        console.log(tagline.indexOf("development"));
+
+        //find subsequent occurences of the string -passing a value greater than the occurence as the second parameter to the method
+
+        const firstOccurence = tagline.indexOf("developers");
+        const secondOccurence = tagline.indexOf("developers", firstOccurence + 1);
+
+        console.log(secondOccurence)
+
+
+        //Extracting a substring from a string
+        //slice(index at which to start extracting, index to stop extracting which is exclusive-character at this index not included in extracted substring)
+        
+        console.log(browserType.slice(1,4))
+
+        console.log(browserType.slice(2))
+
+
+        //CHANGING CASE
+        const radData = "My NaMe Is MuD";
+        console.log(radData.toLowerCase())
+        console.log(radData.toUpperCase())
+
+        //UPDATING PARTS OF A STRING - replace on substring inside a string with another substring using the replace() method
+
+        const updated = browserType.replace("moz", "van");
+
+        console.log(updated);
+
+        console.log(browserType)
+
+        //replace all occurences
+        let quote = "To be or not to be";
+        quote = quote.replaceAll("be", "code");
+
+        console.log(quote)
+
+    
+
+
+
+    </script>
+</body>
+</html>

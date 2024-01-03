@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const list = document.querySelector('.output ul');
+        list.innerHTML = '';
+        const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+        for (const city of cities) {
+        // write your code just below here
+        let cityLower = city.toLowerCase();
+        let firstLetter = cityLower[0];
+        let newString = cityLower.replace(firstLetter, firstLetter.toUpperCase());
+
+
+        const result = newString;
+        const listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+        }
+
+    </script>
+    
+</body>
+</html>

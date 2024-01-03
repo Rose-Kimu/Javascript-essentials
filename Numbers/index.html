@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Start machine</button>
+    <p>The machine is stopped</p>
+    
+    <script>
+
+        //Rounding off to two deciaml places
+
+        console.log("I love you");
+        const lotsOfDecimal = 1.766584958675746364;
+        lotsOfDecimal;
+
+        console.log(lotsOfDecimal);
+
+        const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+        twoDecimalPlaces;
+
+        console.log(twoDecimalPlaces)
+
+
+        //Convert a tring to an integer
+        let myNumber = "74";
+        myNumber = Number(myNumber) + 3;
+
+        console.log(myNumber)
+
+
+
+        //Start and stop the button
+
+        const btn = document.querySelector("button");
+        const txt = document.querySelector("p");
+
+        btn.addEventListener("click", updateBtn);
+
+        function updateBtn(){
+            if (btn.textContent === "Start machine"){
+                btn.textContent = "Stop machine";
+                txt.textContent =  "The machine is started"
+            }
+
+            else {
+                btn.textContent = "Start machine";
+                t6xt.textContent = "The machine is stopped";
+            }
+        }
+
+    </script>
+</body>
+</html>

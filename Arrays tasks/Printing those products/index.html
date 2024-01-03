@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+
+<script>
+
+    console.log("I love you")
+
+    products = [
+        "Underpants:6.99",
+        "Socks:5.99",
+        "T-shirt:14.99",
+        "Trousers:31.99",
+        "Shoes:23.99",
+    ];
+
+    console.log(products);
+    // let total = 0;
+    
+
+    for (const product of products){
+        const splitArray = product.split(":");
+        console.log(splitArray);
+        name = splitArray[0];
+        price = Number(splitArray[1]);
+        total += price;
+
+        let itemText = `${name}`.concat("---").concat(`${price}`);
+        console.log(itemText);
+    }
+
+    console.log(total);
+    
+
+    
+
+    // console.log(products.toString());
+
+    const list = document.querySelector('.output ul');
+    const totalBox = document.querySelector('.output p');
+    // let total = 0;
+    list.innerHTML = '';
+    totalBox.textContent = '';
+    // number 1
+                    'Underpants:6.99'
+                    'Socks:5.99'
+                    'T-shirt:14.99'
+                    'Trousers:31.99'
+                    'Shoes:23.99';
+    products = [
+        ["Underpants",6.99],
+        ["Socks",5.99],
+        ["T-shirt",14.99],
+        ["Trousers",31.99],
+        ["Shoes",23.99],
+    ];
+
+    console.log(products);
+
+    // number 2
+
+    // number 3
+
+    // number 4
+
+    // number 5
+    // let itemText = 0;
+
+    const listItem = document.createElement('li');
+    listItem.textContent = itemText;
+    list.appendChild(listItem);
+
+    // number 6
+
+    totalBox.textContent = 'Total: $' + total.toFixed(2);
+</script>
+</html> -->
+
+
+const list = document.querySelector('.output ul');
+const totalBox = document.querySelector('.output p');
+let total = 0;
+list.innerHTML = '';
+totalBox.textContent = '';
+// number 1
+                'Underpants:6.99'
+                'Socks:5.99'
+                'T-shirt:14.99'
+                'Trousers:31.99'
+                'Shoes:23.99';
+products = [
+        "Underpants:6.99",
+        "Socks:5.99",
+        "T-shirt:14.99",
+        "Trousers:31.99",
+        "Shoes:23.99",
+    ];
+
+    console.log(products);
+  
+    
+
+    for (const product of products){
+        const splitArray = product.split(":");
+        console.log(splitArray);
+        name = splitArray[0];
+        price = Number(splitArray[1]);
+        total += price;
+
+        let itemText = `${name}`.concat("---").concat(`$${price}`);
+       
+        const listItem = document.createElement('li');
+  	listItem.textContent = itemText;
+  	list.appendChild(listItem);
+
+    }
+ 	
+// number 2
+
+  // number 3
+
+  // number 4
+
+  // number 5
+
+// number 6
+
+totalBox.textContent = 'Total: $' + total.toFixed(2);
